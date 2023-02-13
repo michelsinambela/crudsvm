@@ -17,13 +17,13 @@ return new class extends Migration
             $table->id();
             $table->string('gender');
             $table->integer('age');
-            $table->integer('hypertension');
-            $table->integer('heart_disease');
+            $table->double('hypertension');
+            $table->double('heart_disease');
             $table->string('ever_married');
-            $table->integer('avg_glucose_level');
+            $table->double('avg_glucose_level');
             $table->string('bmi');
             $table->string('smoking_status');
-            $table->integer('stroke');
+            $table->double('stroke');
             $table->timestamps();
         });
     }

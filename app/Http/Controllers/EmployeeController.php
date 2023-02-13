@@ -61,7 +61,7 @@ class EmployeeController extends Controller
 
     // import excel
     public function importexcel(Request $request){
-        Excel::import(new DataImport, $request->file);
+        Excel::import(new DataImport, $request->file, null, \Maatwebsite\Excel\Excel::XLSX);
         return "Import Data Successfully";
     }
 

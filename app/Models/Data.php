@@ -11,5 +11,5 @@ class Data extends Model
     // import excel
     protected $guarded = [];
 
-    protected $fillable = ['gender', 'age', 'hypertension', 'heart_disease', 'ever_married', 'avg_glucose_level', 'bmi', 'smoking_status', 'stroke'];
+    // protected $fillable = ['gender', 'age', 'hypertension', 'heart_disease', 'ever_married', 'avg_glucose_level', 'bmi', 'smoking_status', 'stroke'];
 }

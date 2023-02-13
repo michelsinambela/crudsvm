@@ -2,10 +2,11 @@
 
 namespace App\Imports;
 
-use App\Models\Data;
+use App\Models\Employee;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class DataImport implements ToModel
+class DataImport implements ToModel, WithHeadingRow
 {
     /**
     * @param array $row
@@ -14,17 +15,16 @@ class DataImport implements ToModel
     */
     public function model(array $row)
     {
-
-        return new Data([
+        return new Employee([
             'gender' => $row['gender'],
             'age' => $row['age'],
-            'hypertension' => ['hypertension'],
-            'heart_disease' => ['heart_disease'],
-            'ever_married' => ['ever_married'],
-            'avg_glucose_level' => ['avg_glucose_level'],
-            'bmi' => ['bmi'],
-            'smoking_status' => ['smoking_status'],
-            'stroke' => ['stroke']
+            'hypertension' => $row['hypertension'],
+            'heart_disease' => $row['heart_disease'],
+            'ever_married' => $row['ever_married'],
+            'avg_glucose_level' => $row['avg_glucose_level'],
+            'bmi' => $row['bmi'],
+            'smoking_status' => $row['smoking_status'],
+            'stroke' => $row['stroke']
         ]);
     }
 }
